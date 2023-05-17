@@ -1,0 +1,8 @@
+ cd -
+  509  sh buildInputs.sh 2017
+  510  python submit_2017.py work2017_Wgamma_Monophoton_Ptg130_2jets_slc7_amd64_gcc700_CMSSW_10_6_19 1
+  511  voms-proxy-info
+  512  op submit_2017.py
+  513  condor_q sacharya
+  514  condor_ssh_to_job 7144951.0
+  515  condor_rm 6881004
